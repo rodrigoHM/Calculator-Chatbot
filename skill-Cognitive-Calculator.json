@@ -1,0 +1,1150 @@
+{
+  "name": "Cognitive Calculator",
+  "intents": [
+    {
+      "intent": "add",
+      "examples": [
+        {
+          "text": "plus"
+        },
+        {
+          "text": "summation"
+        },
+        {
+          "text": "addition"
+        },
+        {
+          "text": "3 + 2 + 1"
+        },
+        {
+          "text": "4 + 2"
+        },
+        {
+          "text": "calculate the sum of 3, 2, and 44"
+        },
+        {
+          "text": "+"
+        },
+        {
+          "text": "add"
+        },
+        {
+          "text": "sum"
+        }
+      ],
+      "description": "The user would like to perform an addition"
+    },
+    {
+      "intent": "sub",
+      "examples": [
+        {
+          "text": "3 - 2 - 1"
+        },
+        {
+          "text": "minus"
+        },
+        {
+          "text": "subtract"
+        },
+        {
+          "text": "-"
+        },
+        {
+          "text": "sub"
+        },
+        {
+          "text": "deduct"
+        },
+        {
+          "text": "subtraction"
+        }
+      ],
+      "description": "The user would like to perform a subtraction"
+    },
+    {
+      "intent": "avg",
+      "examples": [
+        {
+          "text": "Avg 3, 2, 1"
+        },
+        {
+          "text": "average"
+        },
+        {
+          "text": "Avg"
+        },
+        {
+          "text": "Average of 2, 5, 10 and 56"
+        }
+      ],
+      "description": "The user would like to perform an average"
+    },
+    {
+      "intent": "mul",
+      "examples": [
+        {
+          "text": "3 * 2"
+        },
+        {
+          "text": "product"
+        },
+        {
+          "text": "mutiplication"
+        },
+        {
+          "text": "x"
+        },
+        {
+          "text": "*"
+        },
+        {
+          "text": "multiply"
+        },
+        {
+          "text": "5 * 2 * 1"
+        },
+        {
+          "text": "6 * 2 * 1"
+        }
+      ],
+      "description": "The user would like to perform a multiplication"
+    },
+    {
+      "intent": "memoryOperator",
+      "examples": [
+        {
+          "text": "multiply , m1"
+        },
+        {
+          "text": "add to m1"
+        },
+        {
+          "text": "subtract m1"
+        },
+        {
+          "text": "divide m1 by"
+        },
+        {
+          "text": "+ m1"
+        },
+        {
+          "text": "- m1"
+        },
+        {
+          "text": "m1 -"
+        },
+        {
+          "text": "m1 +"
+        },
+        {
+          "text": "* m1"
+        },
+        {
+          "text": "m1 *"
+        },
+        {
+          "text": "/ m1"
+        },
+        {
+          "text": "m1 /"
+        },
+        {
+          "text": "average of and m1"
+        },
+        {
+          "text": "average m1"
+        },
+        {
+          "text": "multiply m1"
+        },
+        {
+          "text": "divide m1, 2, 5"
+        }
+      ]
+    },
+    {
+      "intent": "save",
+      "examples": [
+        {
+          "text": "save to memory"
+        },
+        {
+          "text": "mem result"
+        },
+        {
+          "text": "Save result"
+        },
+        {
+          "text": "Save result to memory"
+        }
+      ],
+      "description": "User saves result in memory"
+    },
+    {
+      "intent": "result",
+      "examples": [
+        {
+          "text": "Divide the result by"
+        },
+        {
+          "text": "Average result"
+        },
+        {
+          "text": "Subtract from the result"
+        },
+        {
+          "text": "Add to the result"
+        },
+        {
+          "text": "Multiply the result by"
+        }
+      ],
+      "description": "User wants to add an operator to the result with other operands"
+    },
+    {
+      "intent": "div",
+      "examples": [
+        {
+          "text": "6 / 2"
+        },
+        {
+          "text": "7 / 2"
+        },
+        {
+          "text": "5 /2  /2"
+        },
+        {
+          "text": "5 / 2"
+        },
+        {
+          "text": "/"
+        },
+        {
+          "text": "division"
+        },
+        {
+          "text": "divide"
+        },
+        {
+          "text": "quotient"
+        },
+        {
+          "text": "÷"
+        },
+        {
+          "text": "3 / 2 / 1"
+        },
+        {
+          "text": "6 / 12"
+        },
+        {
+          "text": "66 / 2 / 2 / 2"
+        }
+      ],
+      "description": "The user would like to perform a division"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "result",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "result",
+          "synonyms": [
+            "result"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1553655762410",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1553655762410",
+      "previous_sibling": "handler_3_1553655762410"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1553655762410",
+      "context": {},
+      "event_name": "input",
+      "dialog_node": "handler_3_1553655762410"
+    },
+    {
+      "type": "standard",
+      "title": "Number Not Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please Supply Operands."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1553727893456",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_11_1553921729914",
+      "previous_sibling": "node_10_1553921727120"
+    },
+    {
+      "type": "standard",
+      "title": "Number Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1553727893456",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_10_1553921727120"
+    },
+    {
+      "type": "standard",
+      "title": "No Numbers Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please Supply operands."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553727737664",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_5_1553919972274",
+      "previous_sibling": "node_4_1553919922961"
+    },
+    {
+      "type": "standard",
+      "title": "Numbers Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553727737664",
+      "context": {
+        "operands": "@sys-number.values",
+        "operator": "sub"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_4_1553919922961"
+    },
+    {
+      "type": "standard",
+      "title": "Number Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1553921615960",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_1_1553983345841"
+    },
+    {
+      "type": "standard",
+      "title": "Number Not Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please Supply operands."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1553727848311",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_8_1553921615960",
+      "previous_sibling": "node_7_1553921614377"
+    },
+    {
+      "type": "standard",
+      "title": "Number Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1553727848311",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_7_1553921614377"
+    },
+    {
+      "type": "standard",
+      "title": "No Numbers Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please Supply operands."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1553725119584",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_2_1553919710658",
+      "previous_sibling": "node_1_1553919622873"
+    },
+    {
+      "type": "standard",
+      "title": "Numbers Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1553725119584",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_1_1553919622873"
+    },
+    {
+      "type": "standard",
+      "title": "Numbers Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_2_1553919710658",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_3_1553919829084"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1553655711267",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_8_1553663159814"
+      },
+      "conditions": "true",
+      "dialog_node": "node_6_1553657409084",
+      "previous_sibling": "node_8_1553663159814"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1553655711267",
+      "metadata": {},
+      "dialog_node": "slot_2_1553655762410",
+      "previous_sibling": "node_6_1553657409084"
+    },
+    {
+      "type": "standard",
+      "title": "appending result to other numbers",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1553655711267",
+      "context": {
+        "operands": "<? $operands.append($results.value) ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "dialog_node": "node_8_1553663159814"
+    },
+    {
+      "type": "standard",
+      "title": "Numbers Not Provided",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please Supply operands."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1553727799071",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_8_1553920096857",
+      "previous_sibling": "node_7_1553920051978"
+    },
+    {
+      "type": "standard",
+      "title": "Numbers Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_3_1553727799071",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_7_1553920051978"
+    },
+    {
+      "type": "standard",
+      "title": "Numbers Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1553919972274",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_1_1553921411523"
+    },
+    {
+      "type": "standard",
+      "title": "Number Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_11_1553921729914",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_12_1553921757730"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_9_1553663581748",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_10_1553663933550"
+      },
+      "conditions": "true",
+      "dialog_node": "node_12_1553666383347",
+      "previous_sibling": "node_11_1553666351360"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_9_1553663581748",
+      "context": {
+        "operands": [
+          "<? $results.value ?>",
+          "<? $m1 ?>"
+        ]
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@result",
+      "dialog_node": "node_11_1553666351360",
+      "previous_sibling": "node_10_1553663933550"
+    },
+    {
+      "type": "standard",
+      "title": "appending m1 to other numbers",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_9_1553663581748",
+      "context": {
+        "operands": "<? $operands.append($m1) ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "true",
+      "dialog_node": "node_10_1553663933550"
+    },
+    {
+      "type": "standard",
+      "title": "Number Provided",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_8_1553920096857",
+      "context": {
+        "operands": "@sys-number.values"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1553725031889"
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_9_1553920151865"
+    },
+    {
+      "type": "standard",
+      "title": "average result",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "AVG( <? $operands.join(',') ?> )=  $results.value"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553725031889",
+      "metadata": {},
+      "conditions": "$operator == 'avg'",
+      "dialog_node": "node_9_1553728749506",
+      "previous_sibling": "node_8_1553728698377"
+    },
+    {
+      "type": "standard",
+      "title": "sub result",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $operands.join('-') ?> =  $results.value"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553725031889",
+      "metadata": {},
+      "conditions": "$operator == 'sub'",
+      "dialog_node": "node_6_1553727929455",
+      "previous_sibling": "node_1_1553726439176"
+    },
+    {
+      "type": "standard",
+      "title": "division result",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $operands.join('÷') ?> =  $results.value"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553725031889",
+      "metadata": {},
+      "conditions": "$operator == 'div'",
+      "dialog_node": "node_8_1553728698377",
+      "previous_sibling": "node_7_1553728477153"
+    },
+    {
+      "type": "standard",
+      "title": "multiplication resutl",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $operands.join('*') ?> =  $results.value"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553725031889",
+      "metadata": {},
+      "conditions": "$operator == 'mul'",
+      "dialog_node": "node_7_1553728477153",
+      "previous_sibling": "node_6_1553727929455"
+    },
+    {
+      "type": "standard",
+      "title": "add result",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<? $operands.join('+') ?> =  $results.value"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1553725031889",
+      "metadata": {},
+      "conditions": "$operator == 'add'",
+      "dialog_node": "node_1_1553726439176"
+    },
+    {
+      "type": "standard",
+      "title": "Cognitive Calculator Call",
+      "output": {
+        "generic": []
+      },
+      "actions": [
+        {
+          "name": "hurtadro%40sheridancollege.ca_dev/actions/Cognitive-Calculator/calculator",
+          "type": "cloud_function",
+          "parameters": {
+            "operands": "$operands",
+            "operator": "$operator"
+          },
+          "credentials": "$private.cf_cred",
+          "result_variable": "results"
+        }
+      ],
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1553725031889",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_10_1553646923537"
+    },
+    {
+      "type": "standard",
+      "title": "Result + operator + operand",
+      "output": {},
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#result && @result",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1553655711267",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_5_1553727893456"
+    },
+    {
+      "type": "standard",
+      "title": "Multiply",
+      "output": {
+        "generic": []
+      },
+      "context": {
+        "operator": "mul"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#mul",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1553727799071",
+      "previous_sibling": "node_2_1553727737664"
+    },
+    {
+      "type": "standard",
+      "title": "Average",
+      "output": {
+        "generic": []
+      },
+      "context": {
+        "operator": "avg"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#avg",
+      "dialog_node": "node_5_1553727893456",
+      "previous_sibling": "node_4_1553727848311"
+    },
+    {
+      "type": "standard",
+      "title": "Sub",
+      "output": {
+        "generic": []
+      },
+      "context": {
+        "operator": "sub"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#sub",
+      "dialog_node": "node_2_1553727737664",
+      "previous_sibling": "node_3_1553725119584"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, I can help you with any addition, summation, multiplication or division problems!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_3_1553021575834"
+    },
+    {
+      "type": "standard",
+      "title": "memory 1 with any operator",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#memoryOperator",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_9_1553663581748",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1553655711267"
+    },
+    {
+      "type": "standard",
+      "title": "Divide",
+      "output": {
+        "generic": []
+      },
+      "context": {
+        "operator": "div"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#div",
+      "dialog_node": "node_4_1553727848311",
+      "previous_sibling": "node_3_1553727799071"
+    },
+    {
+      "type": "standard",
+      "title": "Add",
+      "output": {
+        "generic": []
+      },
+      "context": {
+        "operator": "add"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#add",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1553725119584",
+      "digress_out": "allow_all",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Saving Number",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "results has been saved to memory 1, and the value saves is  : $m1"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "m1": "<? $results.value ?>"
+      },
+      "metadata": {},
+      "conditions": "#save",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_10_1553646923537",
+      "previous_sibling": "node_9_1553663581748"
+    },
+    {
+      "type": "standard",
+      "title": "problem calculation",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please supply the right operators and/or operands."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1553021401550",
+      "previous_sibling": "node_2_1553725031889"
+    },
+    {
+      "type": "standard",
+      "title": "Conversation start",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "private": {
+          "cf_cred": {
+            "user": "30037693-ea40-4d45-ac52-b1385416caf6",
+            "password": "Zwwf9vJAr7raqh7I6VK84b8u92XGhXe9f0tiAm4GYPHHyLO7GB9EJH4qAIBOVFBe"
+          }
+        }
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "conversation_start",
+      "dialog_node": "node_3_1553021575834"
+    }
+  ],
+  "workspace_id": "6b63efa7-10d9-410e-a590-9c3eb498971f",
+  "counterexamples": [
+    {
+      "text": "1,2,3"
+    },
+    {
+      "text": "1 ,2 ,3 ,1 , 5"
+    },
+    {
+      "text": "2, 1, 2"
+    },
+    {
+      "text": "2,3,5 and 2"
+    },
+    {
+      "text": "2 , 5 ,2"
+    },
+    {
+      "text": "3, 1, and 1"
+    },
+    {
+      "text": "3, 1 and 2"
+    },
+    {
+      "text": "3,2,1,5,2,5"
+    },
+    {
+      "text": "3,2 and 1"
+    },
+    {
+      "text": "3,2 and 2"
+    },
+    {
+      "text": "4,1,2,6,3,2,5"
+    },
+    {
+      "text": "4,2,1,3,4"
+    },
+    {
+      "text": "4,56,32,6,2,1"
+    },
+    {
+      "text": "5 , 2 , 1"
+    },
+    {
+      "text": "5,2,1,34,5"
+    },
+    {
+      "text": "5, 2, 3 and 5"
+    },
+    {
+      "text": "5 , 2 and 3"
+    },
+    {
+      "text": "5< 2< and 6"
+    },
+    {
+      "text": "5,3,2,6,2,2"
+    },
+    {
+      "text": "8, 3, 6 ,3"
+    },
+    {
+      "text": "8,3 ,6 ,3"
+    },
+    {
+      "text": "add, multiply, subtract"
+    }
+  ],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
